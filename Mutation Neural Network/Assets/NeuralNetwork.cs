@@ -42,7 +42,7 @@ public class NeuralNetwork : IComparable<NeuralNetwork>
             float[] bias = new float[layers[i]];
             for (int j = 0; j < layers[i]; j++)
             {
-                bias[j] = UnityEngine.Random.Range(-0.5f, 0.5f);
+                bias[j] = UnityEngine.Random.Range(-0.5f, 0.5f); //TODO: need to add my biases here
             }
             biasList.Add(bias);
         }
@@ -62,7 +62,7 @@ public class NeuralNetwork : IComparable<NeuralNetwork>
                 for (int k = 0; k < neuronsInPreviousLayer; k++)
                 {
                     //float sd = 1f / ((neurons[i].Length + neuronsInPreviousLayer) / 2f);
-                    neuronWeights[k] = UnityEngine.Random.Range(-0.5f, 0.5f);
+                    neuronWeights[k] = UnityEngine.Random.Range(-0.5f, 0.5f); //TODO: Set weights here
                 }
                 layerWeightsList.Add(neuronWeights);
             }
@@ -73,6 +73,8 @@ public class NeuralNetwork : IComparable<NeuralNetwork>
 
     public float[] FeedForward(float[] inputs)//feed forward, inputs >==> outputs.
     {
+        //TODO: use for results
+
         for (int i = 0; i < inputs.Length; i++)
         {
             neurons[0][i] = inputs[i];
