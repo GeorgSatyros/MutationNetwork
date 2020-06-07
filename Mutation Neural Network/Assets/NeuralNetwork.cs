@@ -74,7 +74,6 @@ public class NeuralNetwork : IComparable<NeuralNetwork>
     public float[] FeedForward(float[] inputs)//feed forward, inputs >==> outputs.
     {
         //TODO: use for results
-
         for (int i = 0; i < inputs.Length; i++)
         {
             neurons[0][i] = inputs[i];
